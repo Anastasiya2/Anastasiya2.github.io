@@ -1,0 +1,35 @@
+#contact a svg:hover #facebook,
+#contact a svg:hover #instagram {
+  fill: #FFFDF3;
+}
+
+/* GENERAL STYLES */
+
+#contact {
+  background-color: #111;
+  min-height: 0;
+  padding: 50px 25px;
+}
+
+#contact a {
+    display: inline-block;
+}
+
+article {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+a {
+  outline: none;
+  border: 0;
+  text-decoration: none;
+}
+a svg #facebook,
+a svg #instagram {
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}

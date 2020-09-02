@@ -1,0 +1,37 @@
+header {
+    background-image: url("../img/image_header.jpg");
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: #fff;
+    padding: 50px 60px;
+}
+
+
+.inner {
+    display: flex;
+    position: relative;
+    padding: 0 0;
+}
+
+.vertical-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-50%) rotate(-90deg) translateX(-50%) translateY(50%);
+    font-size: .8rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    margin-top: -.5em;
+}
+
+.subtitle {
+    font-family: 'Cormorant Garamond';
+    font-weight: 300;
+    font-size: 13em;
+    letter-spacing: 0.1em;
+    margin-bottom: 25px;
+    
+}

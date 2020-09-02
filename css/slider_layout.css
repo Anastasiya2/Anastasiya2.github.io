@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.slider .item {
+    position: relative;
+    max-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.slider .img-box {
+    width: 60%;
+}
+
+.slider .caption {
+    background-color: rgba(255, 255, 255, .8);
+    width: 40%;
+    flex-basis: 40%;
+    margin-left: -100px;
+    padding: 25px;
+}
+
+.slider .img-box img {
+    /* Для заповнення ілюстрацією батьківського контейнера   */
+    /* Застосовуємо власт. object-fit  */
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Якщо потрібно інакше позиціонувати ілюстрацію */
+/* (стосується в першу чергу телефонів) */
+/* додавайте додатковий клас в html */
+/* і описуйте в css інакше позиціонування */
+.slider .img-box.pos-bottom img {
+    object-position: center bottom;
+}
+
+.slider .img-box.pos-left img {
+    object-position: left center;
+}
+
+.caption {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.caption h3 {
+    font-size: 2rem;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 700;
+}
+
+@media screen and (max-width:768px) and (orientation: portrait) {
+
+    .slider .item {
+        max-height: 100vh;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+    }
+
+    .slider .img-box {
+        width: 100%;
+    }
+
+    .slider .caption {
+        width: 80%;
+        flex-basis: 80%;
+        margin-left: 0;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width:640px) and (orientation: portrait) {
+
+    .slider .caption {
+        width: 100%;
+        flex-basis: 100%;
+        padding: 0;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
